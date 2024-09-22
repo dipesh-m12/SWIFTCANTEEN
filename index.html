@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SwiftCanteen</title>
+    <link rel="icon" href="launcher.jpeg" type="image/jpeg" />
+    <!-- Favicon -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      h1 {
+        color: #333;
+      }
+      a {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+      }
+      a:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SwiftCanteen</h1>
+    <a id="downloadBtn">Download APK</a>
+
+    <script>
+      const downloadBtn = document.getElementById("downloadBtn");
+      const maxDownloads = 3;
+
+      // Get the current download count from localStorage
+
+      downloadBtn.addEventListener("click", function () {
+        let downloadCount =
+          parseInt(localStorage.getItem("downloadCount")) || 0;
+        if (downloadCount < maxDownloads) {
+          // Increment the download count
+          downloadCount++;
+          localStorage.setItem("downloadCount", downloadCount);
+
+          // Start the download
+          const link = document.createElement("a");
+          link.href =
+            "https://swapk.s3.eu-north-1.amazonaws.com/swiftCanteen.apk";
+          link.download = "swiftCanteen.apk"; // Specify the file name
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+        } else {
+          alert(
+            "Download limit reached. You can only download the APK 4 times."
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
