@@ -10,10 +10,13 @@
       body {
         font-family: Arial, sans-serif;
         text-align: center;
-        margin-top: 50px;
+        margin: 20px;
       }
       h1 {
         color: #333;
+      }
+      h2 {
+        color: #555;
       }
       a {
         padding: 10px 20px;
@@ -27,11 +30,81 @@
       a:hover {
         background-color: #0056b3;
       }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+      }
+      .section {
+        margin: 20px 0;
+      }
     </style>
   </head>
   <body>
     <h1>SwiftCanteen</h1>
     <a id="downloadBtn">Download APK</a>
+
+    <div class="container">
+      <div class="section">
+        <h2>About Us</h2>
+        <p>
+          Welcome to SwiftCanteen! We are a startup founded by students at
+          Pillai College of Engineering in Panvel. Our goal is to revolutionize
+          the way students access food on campus. As a team of dedicated
+          students, we understand the challenges of managing meal options
+          efficiently and aim to provide a seamless experience for all users.
+        </p>
+        <p>
+          Our founder, Dipesh Mishra, is currently pursuing a B.Tech in
+          Information Technology in his third year. We are based in Navi Mumbai
+          and are passionate about leveraging technology to improve student
+          life. SwiftCanteen offers a variety of meal options with easy ordering
+          and quick delivery.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Contact Us</h2>
+        <p>
+          For inquiries or feedback, please reach out to us at:
+        </p>
+        <ul>
+          <li>Email: mavinash423@gmail.com</li>
+          <li>Email: mavinash422@gmail.com</li>
+          <li>Email: mdipesh2626@gmail.com</li>
+        </ul>
+        <p>
+          We look forward to hearing from you!
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Cancellation/Refund Policies</h2>
+        <p>
+          Once an order is placed, we are not liable for any cancellations or
+          refunds. As SwiftCanteen is operated by students, we encourage open
+          communication for any issues that may arise. Our team will strive to
+          resolve any concerns you may have in a polite and efficient manner.
+        </p>
+        <p>
+          We value your privacy and ensure that your data is safely stored. We
+          take precautions to avoid any data leaks and prioritize your security.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Important Information</h2>
+        <p>
+          This app is intended for campus use only and is not the final version.
+          We will be pushing updates and changes as needed to enhance the user
+          experience. Your support and feedback are greatly appreciated as we
+          continue to improve our service.
+        </p>
+        <p>
+          Terms and Conditions apply.
+        </p>
+      </div>
+    </div>
 
     <script>
       const downloadBtn = document.getElementById("downloadBtn");
